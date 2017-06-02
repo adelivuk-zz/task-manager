@@ -48,7 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: task_manager_production
-  username: task_manager
-  password: <%= ENV['LISTAPPV2_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  url: <%= ENV["DATABASE_URL"] %>
